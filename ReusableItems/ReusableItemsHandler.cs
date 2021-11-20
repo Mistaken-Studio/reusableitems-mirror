@@ -52,7 +52,7 @@ namespace Mistaken.ReusableItems
                     StartUses = 2,
                     Uses = 2,
                     MaxItems = 2,
-                    Cooldown = 20,
+                    Cooldown = 10,
                 }
             },
             {
@@ -63,7 +63,7 @@ namespace Mistaken.ReusableItems
                     StartUses = 5,
                     Uses = 5,
                     MaxItems = 1,
-                    Cooldown = 15,
+                    Cooldown = 5,
                 }
             },
             {
@@ -74,7 +74,7 @@ namespace Mistaken.ReusableItems
                     StartUses = 2,
                     Uses = 2,
                     MaxItems = 1,
-                    Cooldown = 30,
+                    Cooldown = 60,
                 }
             },
             {

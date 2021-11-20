@@ -8,6 +8,7 @@
 
 using System;
 using Exiled.API.Features;
+using InventorySystem.Items.Pickups;
 using InventorySystem.Items.Usables;
 
 namespace Mistaken.ReusableItems
@@ -15,9 +16,10 @@ namespace Mistaken.ReusableItems
     [HarmonyLib.HarmonyPatch(typeof(Consumable), nameof(Consumable.OnRemoved))]
     internal static class RemovingConsumablePatch
     {
-        internal static void Postfix(Consumable __instance)
+        internal static void Postfix(Consumable __instance, ItemPickupBase pickup)
         {
-            ReusableItemsHandler.ReusableItems.Remove(__instance.ItemSerial);
+            if (pickup == null)
+                ReusableItemsHandler.ReusableItems.Remove(__instance.ItemSerial);
         }
     }
 }
