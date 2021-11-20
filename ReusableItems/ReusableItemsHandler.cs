@@ -71,7 +71,7 @@ namespace Mistaken.ReusableItems
                 new ReusableItem
                 {
                     Type = ItemType.SCP500,
-                    StartUses = 2,
+                    StartUses = 1,
                     Uses = 2,
                     MaxItems = 1,
                     Cooldown = 60,
