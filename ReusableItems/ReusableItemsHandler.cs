@@ -31,6 +31,7 @@ namespace Mistaken.ReusableItems
             Exiled.Events.Handlers.Player.ChangingItem += this.Player_ChangingItem;
             Events.Handlers.CustomEvents.RequestPickItem += this.CustomEvents_RequestPickItem;
             Exiled.Events.Handlers.Player.PickingUpItem += this.Player_PickingUpItem;
+            Exiled.Events.Handlers.Player.ChangingRole += this.Player_ChangingRole;
         }
 
         public override void OnDisable()
@@ -39,6 +40,7 @@ namespace Mistaken.ReusableItems
             Exiled.Events.Handlers.Player.ChangingItem -= this.Player_ChangingItem;
             Events.Handlers.CustomEvents.RequestPickItem -= this.CustomEvents_RequestPickItem;
             Exiled.Events.Handlers.Player.PickingUpItem -= this.Player_PickingUpItem;
+            Exiled.Events.Handlers.Player.ChangingRole -= this.Player_ChangingRole;
         }
 
         internal static readonly Dictionary<ushort, ReusableItemData> ReusableItems = new Dictionary<ushort, ReusableItemData>();
@@ -114,6 +116,18 @@ namespace Mistaken.ReusableItems
                 this.UsesLeft = usesLeft;
                 this.Cooldown = cooldown;
                 this.MaxItems = maxItems;
+            }
+        }
+
+        private void Player_ChangingRole(Exiled.Events.EventArgs.ChangingRoleEventArgs ev)
+        {
+            foreach (var defaultReusableItem in DefaultReusableItems)
+            {
+                foreach (var item in ev.Player.Items.Where(x => x.Type == defaultReusableItem.Key).ToArray())
+                {
+                    if (!ReusableItems.ContainsKey(item.Serial))
+                        ReusableItems[item.Serial] = new ReusableItemData(item as Usable, defaultReusableItem.Value.StartUses, defaultReusableItem.Value.Cooldown, defaultReusableItem.Value.MaxItems);
+                }
             }
         }
 

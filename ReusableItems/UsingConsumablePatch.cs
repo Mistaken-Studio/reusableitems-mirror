@@ -41,7 +41,6 @@ namespace Mistaken.ReusableItems
                     __instance._alreadyActivated = false;
                     __instance.IsUsing = false;
                     __instance._useStopwatch.Stop();
-                    Log.Debug(data.UsesLeft);
                     return false;
                 }
 
