@@ -231,6 +231,9 @@ namespace Mistaken.ReusableItems
         {
             yield return Timing.WaitForSeconds(.1f);
 
+            if (p.CurrentItem == null)
+                yield break;
+
             var itemSerial = p.CurrentItem.Serial;
 
             if (!DefaultReusableItems.TryGetValue(p.CurrentItem.Type, out var defaultValue))
