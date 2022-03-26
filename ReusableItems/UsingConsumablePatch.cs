@@ -19,7 +19,7 @@ namespace Mistaken.ReusableItems
         internal static bool Prefix(Consumable __instance)
         {
             var ev = new Exiled.Events.EventArgs.UsedItemEventArgs(Player.Get(__instance.Owner), __instance);
-            Exiled.Events.Handlers.Player.OnItemUsed(ev);
+            Exiled.Events.Handlers.Player.OnUsedItem(ev);
             ev.Player.SetGUI("reusable", PseudoGUIPosition.BOTTOM, null);
             if (ReusableItemsHandler.ReusableItems.TryGetValue(__instance.ItemSerial, out var data))
             {
