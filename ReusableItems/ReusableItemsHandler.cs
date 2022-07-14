@@ -51,7 +51,7 @@ namespace Mistaken.ReusableItems
                 new ReusableItem
                 {
                     Type = ItemType.Medkit,
-                    StartUses = 2,
+                    StartUses = 1,
                     Uses = 2,
                     MaxItems = 2,
                     Cooldown = 10,
@@ -62,8 +62,8 @@ namespace Mistaken.ReusableItems
                 new ReusableItem
                 {
                     Type = ItemType.Painkillers,
-                    StartUses = 5,
-                    Uses = 5,
+                    StartUses = 3,
+                    Uses = 3,
                     MaxItems = 1,
                     Cooldown = 5,
                 }
@@ -79,7 +79,7 @@ namespace Mistaken.ReusableItems
                     Cooldown = 60,
                 }
             },
-            {
+            /*{
                 ItemType.SCP207,
                 new ReusableItem
                 {
@@ -88,7 +88,7 @@ namespace Mistaken.ReusableItems
                     Uses = 4,
                     MaxItems = 1,
                 }
-            },
+            },*/
         };
 
         internal struct ReusableItem
