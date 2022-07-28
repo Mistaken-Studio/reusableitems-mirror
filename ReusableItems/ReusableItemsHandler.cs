@@ -65,7 +65,7 @@ namespace Mistaken.ReusableItems
                     StartUses = 3,
                     Uses = 3,
                     MaxItems = 1,
-                    Cooldown = 5,
+                    Cooldown = 8,
                 }
             },
             {
@@ -74,7 +74,7 @@ namespace Mistaken.ReusableItems
                 {
                     Type = ItemType.SCP500,
                     StartUses = 1,
-                    Uses = 2,
+                    Uses = 1,
                     MaxItems = 1,
                     Cooldown = 60,
                 }
