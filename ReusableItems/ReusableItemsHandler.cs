@@ -69,16 +69,6 @@ namespace Mistaken.ReusableItems
                 }
             },
             {
-                ItemType.SCP500,
-                new ReusableItem
-                {
-                    Type = ItemType.SCP500,
-                    StartUses = 1,
-                    Uses = 1,
-                    MaxItems = 2,
-                }
-            },
-            {
                 ItemType.SCP207,
                 new ReusableItem
                 {
