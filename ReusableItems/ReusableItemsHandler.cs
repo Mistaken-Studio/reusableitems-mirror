@@ -51,7 +51,7 @@ namespace Mistaken.ReusableItems
                 new ReusableItem
                 {
                     Type = ItemType.Medkit,
-                    StartUses = 2,
+                    StartUses = 1,
                     Uses = 2,
                     MaxItems = 2,
                     Cooldown = 10,
@@ -62,21 +62,10 @@ namespace Mistaken.ReusableItems
                 new ReusableItem
                 {
                     Type = ItemType.Painkillers,
-                    StartUses = 5,
-                    Uses = 5,
+                    StartUses = 3,
+                    Uses = 3,
                     MaxItems = 1,
-                    Cooldown = 5,
-                }
-            },
-            {
-                ItemType.SCP500,
-                new ReusableItem
-                {
-                    Type = ItemType.SCP500,
-                    StartUses = 1,
-                    Uses = 2,
-                    MaxItems = 1,
-                    Cooldown = 60,
+                    Cooldown = 8,
                 }
             },
             {
@@ -84,9 +73,10 @@ namespace Mistaken.ReusableItems
                 new ReusableItem
                 {
                     Type = ItemType.SCP207,
-                    StartUses = 4,
-                    Uses = 4,
+                    StartUses = 1,
+                    Uses = 2,
                     MaxItems = 1,
+                    Cooldown = 30,
                 }
             },
         };
