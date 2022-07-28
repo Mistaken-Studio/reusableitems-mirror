@@ -75,7 +75,7 @@ namespace Mistaken.ReusableItems
                     Type = ItemType.SCP500,
                     StartUses = 1,
                     Uses = 1,
-                    MaxItems = 1,
+                    MaxItems = 2,
                 }
             },
             {
