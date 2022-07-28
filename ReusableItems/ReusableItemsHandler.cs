@@ -76,19 +76,19 @@ namespace Mistaken.ReusableItems
                     StartUses = 1,
                     Uses = 1,
                     MaxItems = 1,
-                    Cooldown = 60,
                 }
             },
-            /*{
+            {
                 ItemType.SCP207,
                 new ReusableItem
                 {
                     Type = ItemType.SCP207,
-                    StartUses = 4,
-                    Uses = 4,
+                    StartUses = 1,
+                    Uses = 2,
                     MaxItems = 1,
+                    Cooldown = 30,
                 }
-            },*/
+            },
         };
 
         internal struct ReusableItem
