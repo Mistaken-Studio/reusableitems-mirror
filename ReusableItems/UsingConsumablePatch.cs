@@ -47,8 +47,7 @@ namespace Mistaken.ReusableItems
                 ReusableItemsHandler.ReusableItems.Remove(__instance.ItemSerial);
             }
 
-            if (__instance.Owner.characterClassManager.CurRole.team == Team.CHI || __instance.Owner.characterClassManager.CurClass == RoleType.ClassD)
-                Respawning.GameplayTickets.Singleton.HandleItemTickets(__instance.OwnerInventory.CurInstance);
+            Respawning.GameplayTickets.Singleton.HandleItemTickets(__instance);
 
             __instance.OwnerInventory.NetworkCurItem = InventorySystem.Items.ItemIdentifier.None;
             __instance.OwnerInventory.CurInstance = null;
